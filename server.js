@@ -36,6 +36,10 @@ app.use((req, res, next) => {
   next();
 });
 
+// Friendly redirects for /privacy and /terms
+app.get('/privacy', (req, res) => res.redirect(301, '/privacy.html'));
+app.get('/terms', (req, res) => res.redirect(301, '/terms.html'));
+
 app.use(express.static(__dirname, { extensions: ['html'] }));
 
 // ---- Persistence (simple JSON log; swap for postgres later) ----
