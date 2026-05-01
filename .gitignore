@@ -1,0 +1,6 @@
+node_modules/
+.env
+.env.local
+leads.log.jsonl
+*.log
+.DS_Store
