@@ -26,6 +26,16 @@ const app = express();
 
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));
+
+// Apex → www redirect (preserves path & query)
+app.use((req, res, next) => {
+  const host = (req.headers.host || '').toLowerCase();
+  if (host === 'stormchecktrustmanroofing.com') {
+    return res.redirect(301, `https://www.stormchecktrustmanroofing.com${req.originalUrl}`);
+  }
+  next();
+});
+
 app.use(express.static(__dirname, { extensions: ['html'] }));
 
 // ---- Persistence (simple JSON log; swap for postgres later) ----
