@@ -26,19 +26,14 @@ body{min-height:100vh}
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
-  color:#fff;
+  background:#ffffff;
+  color:var(--text);
   padding:48px 20px 56px;
   position:relative;
   overflow:hidden;
+  border-bottom:1px solid #eef0f3;
 }
-.hero::before{
-  content:'';
-  position:absolute;inset:0;
-  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M30 5 L40 25 L30 45 L20 25 Z" fill="rgba(255,255,255,0.02)"/></svg>');
-  background-size:60px 60px;
-  pointer-events:none;
-}
+.hero::before{display:none}
 .hero-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
 
 .brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:28px}
@@ -59,10 +54,10 @@ body{min-height:100vh}
 
 h1{font-size:34px;font-weight:800;line-height:1.15;margin-bottom:14px;letter-spacing:-0.5px}
 h1 .accent{color:var(--orange-2)}
-.sub{font-size:17px;color:#b8c4d6;margin-bottom:28px;max-width:480px}
+.sub{font-size:17px;color:var(--muted);margin-bottom:28px;max-width:480px}
 
 .trust-row{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:24px}
-.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#a8b3c5}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
 .check{color:var(--green);font-weight:700}
 
 /* FORM CARD */
